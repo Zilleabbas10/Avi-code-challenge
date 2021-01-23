@@ -48,7 +48,6 @@ const HomeScreen = () => {
       selectedPracticesIds,
       practices,
     });
-    console.log(getFormattedData);
     dispatch(setMapCoordinates(getFormattedData));
     NavigationService.navigate(APP_ROUTES.MAP_SCREEN);
   };
