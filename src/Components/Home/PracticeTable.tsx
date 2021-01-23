@@ -53,7 +53,7 @@ type RenderItemType = {
   onRowPressHandler(object): void;
   selectedPracticesIds: Array<number>;
 };
-const TableRow = (props: RenderItemType) => {
+export const TableRow = (props: RenderItemType) => {
   const {item, onRowPressHandler = () => {}, selectedPracticesIds = []} = props;
   const backgroundColor = selectedPracticesIds.includes(item.id)
     ? Colors.disabledPrimary

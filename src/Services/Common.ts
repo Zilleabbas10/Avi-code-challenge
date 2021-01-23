@@ -21,7 +21,6 @@ const formatPractices = (practice) => {
       coords: [lon, lat],
       zoom
     }
-
   };
 };
 
@@ -32,6 +31,7 @@ const formatPractices = (practice) => {
  * @returns
  */
 const getFormattedPractices = (response) => {
+  console.log(response)
   const practicesList = pathOr([], ['data'], response);
   return map((practices) => {
     return formatPractices(practices);

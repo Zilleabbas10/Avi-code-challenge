@@ -29,8 +29,6 @@ const getAsyncStorageItem = async (key: string) => {
  * @param {(string | object)} data
  */
 const saveToAsyncStorage = async (key: string, data: string | object) => {
-  // console.log('saving to async storage', key)
-  // console.log('saving to async storage', data)
   const parsedData = typeof data === 'string' ? data : JSON.stringify(data)
   AsyncStorage.setItem(key, parsedData)
 }
@@ -41,7 +39,6 @@ const saveToAsyncStorage = async (key: string, data: string | object) => {
  * @param {string} key
  */
 const removeKeyFromAsyncStorage = async (key: string) => {
-  // console.log('removing from async storage: ', key)
   AsyncStorage.removeItem(key)
 }
 
